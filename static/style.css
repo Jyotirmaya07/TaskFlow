@@ -1,0 +1,23 @@
+<footer class="text-center mt-5 text-muted">
+    <small>© 2025 Task Manager App by [Your Name]</small>
+</footer>
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+.list-group-item:hover {
+    background-color: #f0f8ff;
+    cursor: pointer;
+}
+body {
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    min-height: 100vh;
+}
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
+.text-muted {
+    opacity: 0.6;
+}
+
+
+
