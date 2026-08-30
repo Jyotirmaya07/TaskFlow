@@ -1,36 +1,77 @@
-# Task Manager Web App 📝
+# TaskFlow — Task Manager Web App 📝
+
+A modern task management web application built with Flask that helps users organize, track, and manage their daily tasks through a clean productivity dashboard.
 
 ## 📌 Overview
 
-This is a **full-featured Task Manager Web Application** built using Flask. It allows users to securely manage their daily tasks with authentication, task filtering, and status tracking.
+TaskFlow provides a simple workspace where users can securely manage their tasks, track progress, update task status, and filter tasks based on their current needs.
+
+The application includes user authentication, task CRUD operations, priority management, categories, due dates, progress tracking, and a responsive dashboard interface.
 
 ---
 
 ## 🚀 Features
 
-* 🔐 User Signup & Login (with password hashing)
-* ➕ Add tasks
-* ❌ Delete tasks
-* ✅ Mark tasks as complete/incomplete
-* ⭐ Mark tasks as important
-* 🔍 Filter tasks:
+### 🔐 User Authentication
+- User signup and login
+- Password hashing using Flask-Bcrypt
+- Session-based authentication
+- User-specific task management
+- Logout functionality
 
-  * All tasks
-  * Important tasks
-  * Completed tasks
-  * In-progress tasks
-* 👤 User-specific task management
+### 📋 Task Management
+- Create new tasks
+- Edit existing tasks
+- Delete tasks
+- Change task status
+- Mark tasks as completed
+- Assign task priority
+- Add task categories
+- Set due dates
+- Add optional task descriptions
+
+### 🔍 Task Filtering
+Tasks can be filtered by:
+
+- All Tasks
+- To Do
+- In Progress
+- Completed
+- High Priority
+
+### 📊 Productivity Dashboard
+- Overall task completion percentage
+- Total completed tasks
+- To Do task count
+- In Progress task count
+- Completed task count
+- Overdue task count
+- Current date display
+
+### 🎨 User Interface
+- Clean and modern dashboard
+- Responsive layout
+- Separate login and signup interfaces
+- Task status and priority indicators
+- Mobile-friendly design
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Python
-* Flask
-* SQLite (Database)
-* SQLAlchemy (ORM)
-* Flask-Bcrypt (Password hashing)
-* HTML, CSS
+### Backend
+- Python
+- Flask
+- Flask-SQLAlchemy
+- Flask-Bcrypt
+
+### Database
+- SQLite
+
+### Frontend
+- HTML5
+- CSS3
+- Bootstrap 5
 
 ---
 
@@ -38,87 +79,40 @@ This is a **full-featured Task Manager Web Application** built using Flask. It a
 
 ### 1️⃣ Authentication
 
-* Users can **sign up and log in**
-* Passwords are securely stored using hashing
+Users can create an account and log in securely.
 
-### 2️⃣ Task Management
+Passwords are hashed using **Flask-Bcrypt** before being stored in the database.
 
-* Each user has their own tasks
-* Tasks can be:
+### 2️⃣ Task Creation
 
-  * Marked as done
-  * Marked as important
+After logging in, users can create tasks with:
 
-### 3️⃣ Filtering
+- Title
+- Description
+- Priority
+- Category
+- Due date
 
-Users can view:
+### 3️⃣ Task Tracking
 
-* Important tasks
-* Completed tasks
-* Tasks in progress
+Each task can be moved between different states:
+
+- To Do
+- In Progress
+- Completed
+
+Users can also edit or delete their tasks.
+
+### 4️⃣ Dashboard
+
+The dashboard provides an overview of task progress and displays statistics based on the user's tasks.
 
 ---
 
 ## ▶️ How to Run
 
-### Step 1: Install dependencies
+### Step 1: Clone the repository
 
 ```bash
-pip install flask flask_sqlalchemy flask_bcrypt
-```
-
----
-
-### Step 2: Run the app
-
-```bash
-python app.py
-```
-
----
-
-### Step 3: Open in browser
-
-```
-http://127.0.0.1:5000
-```
-
----
-
-## 📁 Project Structure
-
-```bash
-task-manager/
-│── app.py
-│── templates/
-│   │── index.html
-│   │── login.html
-│   │── signup.html
-│── static/
-│   │── style.css
-│── instance/
-│   │── final_tasks.db
-```
-
----
-
-## ⚠️ Important Notes
-
-* Database file (`final_tasks.db`) is not included in the repository
-* It will be automatically created when you run the app
-* Make sure your browser allows cookies (for session login)
-
----
-
-## 🔮 Future Improvements
-
-* Add task deadlines
-* Add notifications/reminders
-* Improve UI with modern frameworks
-* Deploy online (Render/Heroku)
-
----
-
-## 👨‍💻 Author
-
-Jyotirmaya Swain
+git clone https://github.com/Jyotirmaya07/TaskFlow.git
+cd TaskFlow
